@@ -1,9 +1,9 @@
 //
-//  ContentCell.swift
-//  BounceHeaderScroll
+//  SwipeSegue.swift
+//  CustomSegue
 //
-//  Created by nyato on 2017/8/8.
-//  Copyright © 2017年 nyato. All rights reserved.
+//  Created by Ju on 2017/6/4.
+//  Copyright © 2017年 Ju. All rights reserved.
 //
 
 import UIKit

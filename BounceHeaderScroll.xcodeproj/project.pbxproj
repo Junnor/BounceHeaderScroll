@@ -23,7 +23,6 @@
 		67D308C91F39A9A30083CD9D /* SwipeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D308C71F39A9A30083CD9D /* SwipeSegue.swift */; };
 		67D308CC1F39ACCD0083CD9D /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D308CA1F39ACCD0083CD9D /* ContentCell.swift */; };
 		67D308CD1F39ACCD0083CD9D /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67D308CB1F39ACCD0083CD9D /* ContentCell.xib */; };
-		67D308CF1F39AD590083CD9D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D308CE1F39AD590083CD9D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		67D308C71F39A9A30083CD9D /* SwipeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeSegue.swift; sourceTree = "<group>"; };
 		67D308CA1F39ACCD0083CD9D /* ContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		67D308CB1F39ACCD0083CD9D /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
-		67D308CE1F39AD590083CD9D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 			children = (
 				678A034A1F398CE40016791D /* AppDelegate.swift */,
 				678A034C1F398CE40016791D /* ViewController.swift */,
-				67D308CE1F39AD590083CD9D /* MainViewController.swift */,
 				67D308C61F39A9A30083CD9D /* DetailViewController.swift */,
 				67D308C71F39A9A30083CD9D /* SwipeSegue.swift */,
 				678A034E1F398CE40016791D /* Main.storyboard */,
@@ -193,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				671885F01F39A6BC00D5EC7A /* PageContainerController.swift in Sources */,
-				67D308CF1F39AD590083CD9D /* MainViewController.swift in Sources */,
 				671885F21F39A6BC00D5EC7A /* PageViewController.swift in Sources */,
 				678A034D1F398CE40016791D /* ViewController.swift in Sources */,
 				678A035D1F398D0C0016791D /* HeaderView.swift in Sources */,

@@ -63,7 +63,7 @@ class PageContentViewController: UIViewController {
         titleLabel.center = view.center
         titleLabel.text = pageTitle
         titleLabel.textColor = UIColor.white
-        titleLabel.font = UIFont.systemFont(ofSize: 50)
+        titleLabel.font = UIFont.systemFont(ofSize: 30)
         titleLabel.textAlignment = .center
         view.addSubview(titleLabel)
     }

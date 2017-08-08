@@ -148,11 +148,11 @@ extension ViewController: UICollectionViewDelegate {
         
         if offsetY < 0 {
             var headerScaleFactor = -offsetY / self.headerView.bounds.size.height
-            headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, 0)
+            headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, -1)
             headerTransform = CATransform3DScale(headerTransform,
                                                  1.0 + 2 * headerScaleFactor,
                                                  1.0 + 2 * headerScaleFactor,
-                                                 0)
+                                                 -1)
 
             self.headerView.layer.transform = headerTransform
             
@@ -164,7 +164,7 @@ extension ViewController: UICollectionViewDelegate {
             }
         } else {
             if !scrollHeaderViewUp {
-                headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, 0)
+                headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, -1)
                 self.headerView.layer.transform = headerTransform
                 
                 let headerFactor = offsetY / self.headerView.bounds.size.height * maxShadowAlpha

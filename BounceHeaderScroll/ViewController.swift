@@ -89,7 +89,7 @@ class ViewController: UIViewController {
                                                 showTitle: true)
 //        addChildViewController(pageContainer)
         pageContainer.delegate = self
-        pageContainer.pageImageFiles = ["23", "24", "24"]
+        pageContainer.pageImageFiles = ["5", "4", "3"]
         pageContainer.pageTitles = ["Page 0", "Page 1", "Page 2"]
         
         let frame = headerView.bounds

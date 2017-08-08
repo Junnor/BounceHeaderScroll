@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     fileprivate var headerView: HeaderView!
     fileprivate var customStatusBar: UIView!
     
+    fileprivate let zPostionForHeaderView: CGFloat = -1
+    
     fileprivate var scrollHeaderViewUp = true
     fileprivate var preferredLightStatusBar = true
     
@@ -74,7 +76,7 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gesture:)))
         headerView.addGestureRecognizer(tap)
             
-        headerView.layer.zPosition = -1
+        headerView.layer.zPosition = zPostionForHeaderView
         
         collectionView.insertSubview(headerView, at: 0)
     }
@@ -148,11 +150,11 @@ extension ViewController: UICollectionViewDelegate {
         
         if offsetY < 0 {
             var headerScaleFactor = -offsetY / self.headerView.bounds.size.height
-            headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, -1)
+            headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, zPostionForHeaderView)
             headerTransform = CATransform3DScale(headerTransform,
                                                  1.0 + 2 * headerScaleFactor,
                                                  1.0 + 2 * headerScaleFactor,
-                                                 -1)
+                                                 zPostionForHeaderView)
 
             self.headerView.layer.transform = headerTransform
             
@@ -164,7 +166,7 @@ extension ViewController: UICollectionViewDelegate {
             }
         } else {
             if !scrollHeaderViewUp {
-                headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, -1)
+                headerTransform = CATransform3DTranslate(headerTransform, 0, offsetY, zPostionForHeaderView)
                 self.headerView.layer.transform = headerTransform
                 
                 let headerFactor = offsetY / self.headerView.bounds.size.height * maxShadowAlpha

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BounceHeaderScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6vn-r0-ZLC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V2S-uh-Tux">
+                                    <size key="itemSize" width="291" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6vn-r0-ZLC" secondAttribute="trailing" id="PXM-Tw-Vxd"/>
+                            <constraint firstItem="6vn-r0-ZLC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TGf-nd-LCm"/>
+                            <constraint firstItem="6vn-r0-ZLC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rwe-o1-i5X"/>
+                            <constraint firstItem="6vn-r0-ZLC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wUB-Vz-YtL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="6vn-r0-ZLC" id="ZEv-8G-2U6"/>
+                        <segue destination="8Uq-39-3mc" kind="presentation" identifier="ContentDetail" customClass="SwipeSegue" customModule="BounceHeaderScroll" customModuleProvider="target" id="HNl-3Z-uGV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1503" y="-27"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="xLr-bb-49q">
+            <objects>
+                <viewController id="Uq8-5F-eDS" customClass="MainViewController" customModule="BounceHeaderScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4kT-ex-H78"/>
+                        <viewControllerLayoutGuide type="bottom" id="VGv-gg-hPj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bkx-nY-dXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="chT-jM-cFJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="chT-jM-cFJ" secondAttribute="trailing" id="Bn7-Ln-Y3u"/>
+                            <constraint firstItem="chT-jM-cFJ" firstAttribute="top" secondItem="Bkx-nY-dXj" secondAttribute="top" id="NDw-wg-6au"/>
+                            <constraint firstItem="chT-jM-cFJ" firstAttribute="leading" secondItem="Bkx-nY-dXj" secondAttribute="leading" id="YsD-I9-Uzq"/>
+                            <constraint firstItem="chT-jM-cFJ" firstAttribute="bottom" secondItem="VGv-gg-hPj" secondAttribute="top" id="fMn-ss-RZs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="chT-jM-cFJ" id="C4J-Jr-r46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xa-PB-exf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1391.2" y="1105.9970014992505"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="dVU-1M-kFW">
+            <objects>
+                <viewController id="8Uq-39-3mc" customClass="DetailViewController" customModule="BounceHeaderScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YKK-d5-eNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="o53-sQ-SB2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jKY-JA-TgI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-4n-4Ex">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Kn4-jr-9ND"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6hI-jJ-IGv" appends="YES" id="n7Y-eC-iC8"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uqc-4n-4Ex" secondAttribute="trailing" id="HA2-rM-BPj"/>
+                            <constraint firstItem="uqc-4n-4Ex" firstAttribute="leading" secondItem="jKY-JA-TgI" secondAttribute="leading" id="LYk-Pm-QP8"/>
+                            <constraint firstItem="uqc-4n-4Ex" firstAttribute="top" secondItem="jKY-JA-TgI" secondAttribute="top" id="TOG-Wa-qxM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="uqc-4n-4Ex" id="PVo-Mt-Pk7"/>
+                        <outlet property="imageswipeGestureDown" destination="6hI-jJ-IGv" id="VKQ-TB-RRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U65-ws-Jif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tj4-HH-2F8" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="6hI-jJ-IGv">
+                    <connections>
+                        <segue destination="tj4-HH-2F8" kind="unwind" unwindAction="unwindToViewController:" id="wBm-Jm-4gt"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-366" y="-27"/>
+        </scene>
+    </scenes>
+</document>

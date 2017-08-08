@@ -58,6 +58,18 @@ class ViewController: UIViewController {
         configurePageContainer()
     }
     
+    
+    private var populated = false
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !populated {
+            populated = true
+            
+            headerView.frame = CGRect(x: 0, y: 0, width: cellWidth, height: cellHeight)
+        }
+    }
+    
     // MARK: - Helper
     
     private func configureStatusBar() {
@@ -71,7 +83,6 @@ class ViewController: UIViewController {
     
     private func configureHeaderView() {
         headerView = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.first as! HeaderView
-        headerView.frame = CGRect(x: 0, y: 0, width: cellWidth, height: cellHeight)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gesture:)))
         headerView.addGestureRecognizer(tap)

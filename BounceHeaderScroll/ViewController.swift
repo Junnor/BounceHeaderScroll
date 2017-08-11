@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     fileprivate let zPostionForHeaderView: CGFloat = -1
     
-    fileprivate var scrollHeaderViewUp = true
+    fileprivate var scrollHeaderViewUp = false
     fileprivate var preferredLightStatusBar = true
     
     fileprivate let cellWidth = UIScreen.main.bounds.width
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         pageContainer = PageContainerController(useTimer: true,
                                                 recursive: true,
                                                 showTitle: true)
-//        addChildViewController(pageContainer)
+        addChildViewController(pageContainer)
         pageContainer.delegate = self
         pageContainer.pageImageFiles = ["5", "4", "3"]
         pageContainer.pageTitles = ["Page 0", "Page 1", "Page 2"]
@@ -109,8 +109,7 @@ class ViewController: UIViewController {
         pageContainer.view.frame = frame
         headerView.addSubview(pageContainer.view)
         
-        // 如果把 pageContainer 加进去 事件响应会直接在 Collection View Cell，所以就不加了
-//        pageContainer.didMove(toParentViewController: self)
+        pageContainer.didMove(toParentViewController: self)
     }
     
     
